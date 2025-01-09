@@ -11,6 +11,147 @@
   <link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:wght@400;700&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
 </head>
 <body>
-  
+  <div id="app">
+    <main>
+      <div class="main-container">
+        <div class="back">
+            <img src="assets/icons/arrow-left-02.svg" alt="ícone de voltar">
+            <span>Voltar</span>
+        </div>
+
+        <h1>Formulário de matrícula</h1>
+        <p>Preencha os dados abaixo para matricular seu filho na escola de educação infantil Estrelas do Amanhã.</p>
+
+        <form action="" method="post" enctype="multipart/form-data">
+          <fieldset class="child-info">
+            <legend>Informações da criança</legend>
+
+            <div class="input-wrapper">
+              <label for="fullname">Nome Completo</label>
+              <input id="fullname" type="text" placeholder="Coloque o nome da criança">
+            </div>
+            
+            <div class="input-wrapper">
+              <label for="birth">Data de Nascimento</label>
+              <input type="date" id="birth" lang="pt-BR">
+            </div>
+
+            <div class="select-wrapper">
+              <label for="gender">Sexo</label>
+              <select name="gender" id="gender">
+                <option value="Masculino">Masculino</option>
+                <option value="Feminino">Feminino</option>
+                <option value="NA">Prefiro não responder</option>
+              </select>
+            </div>
+
+            <div class="textarea-wrapper">
+              <label for="medical-info">Informações médicas</label>
+              <textarea name="medical-info" id="medical-info" cols="30" rows="6" placeholder="A criança possui alguma condição médica expecífica?"></textarea>
+            </div>
+
+            <div class="droparea-wrapper">
+              <label for="birth-file"> Certidão de Nascimento</label>
+              <div class="dropzone">
+                <input type="file" id="birth-file" name="birth-file">
+                <img src="assets/icons/cloud-upload.svg" alt="">
+                <p>Clique aqui para selecionar os arquivos</p>
+              </div>
+            </div>
+          </fieldset>
+
+          <fieldset class="address">
+            <legend>Endereço residencial</legend>
+            <div class="input-wrapper">
+              <label for="cep">CEP</label>
+              <input type="text" id="cep" name="cep">
+            </div>
+
+            <div class="flex">
+              <div class="input-wrapper flex-2">
+                <label for="street">Rua</label>
+                <input type="text" id="street" name="street" disabled value="Rua das Flores">
+              </div>
+              <div class="input-wrapper flex-1">
+                <label for="number">Número</label>
+                <input type="number" id="number" name="number" disabled value="34">
+              </div>
+            </div>
+
+            <div class="flex">
+              <div class="input-wrapper flex-2">
+                <label for="city">Cidade</label>
+                <input type="text" id="city" name="city" disabled value="Porto Alegre" >
+              </div>
+              <div class="input-wrapper flex-1">
+                <label for="state">Estado</label>
+                <input type="text" id="state" name="state"  value="RS">
+              </div>
+            </div>
+
+          </fieldset>
+
+          <fieldset class="gardian">
+            <legend>Informações do Responsável</legend>
+            <div class="input-wrapepr">
+              <label for="gardian"> Nome do Responsável</label>
+              <input type="text" id="gardian" name="gardian">
+              <small>Principal responsável legal e contato de emergência</small>
+            </div>
+
+            <div class="input-wrapepr">
+              <label for="phone"> Telefone</label>
+              <input type="tel" id="phone" name="phone" placeholder="(10) 9 8765-4321">
+              <small>Principal responsável legal e contato de emergência</small>
+            </div>
+
+            <div class="input-wrapepr">
+              <label for="email">Email</label>
+              <input type="email" id="mail" name="mail" placeholder="" required>
+              <div class="error">
+                <img src="assets/icons/alert-circle.svg" alt="ícone de alerta vermelho">
+                <span>Insira um e-mail válido</span>
+              </div>
+            </div>
+          </fieldset>
+
+          <fieldset class="enroll-options">
+            <legend>Opções de matrícula</legend>
+
+            <div class="input-wrapper">
+              <label for="">Selecione o turno de estudo</label>
+              <div class="radio-wrapper">
+                <div class="radio-inner">
+                  <div class="radio-image"></div>
+                  <input type="radio" name="study-shift" value="morning" id="morning">
+                  <img src="assets/icons/sun-cloud-02.svg" alt="Ícone de sol com nuvem">
+                  <label for="morning">Manhã</label>
+                </div>
+                <div class="radio-inner">
+                  <div class="radio-image"></div>
+                  <input type="radio" name="study-shift" value="evening" id="evening">
+                  <img src="assets/icons/sun-02.svg" alt="Ícone de sol">
+                  <label for="evening">Manhã</label>
+                </div>
+              </div>
+            </div>
+
+          </fieldset>
+
+        </form>
+      </div>
+    </main>
+
+    <aside>
+      <div class="aside-container">
+        <header>
+          <header><img src="assets/logo.svg" alt="Logo Estrelas do amanhã"></header>
+          <h2>Porque cada momento de <strong>aprendizado</strong> conta</h2>
+          <p>Inscreva seu filho em nossa escola e veja-o florescer em um ambiente acolhedor, seguro e estimulante.</p>
+        </header>
+        <img src="assets/Illustration.svg" alt="Ilustração de professora ensinando">
+      </div>
+    </aside>
+  </div>
 </body>
 </html>
